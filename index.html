@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Table color -->
+    <style>
+      tr:nth-child(even) {
+        background-color: #f1f1f1;
+      }
+
+      th > td {
+        justify-content: start;
+      }
+      th,
+      tr,
+      tr > td {
+        text-align: center;
+      }
+      /*     th {
+  text-align: center;
+  
+} */
+    </style>
+
+    <title>Data page</title>
+  </head>
+
+  <body>
+    <div id="overlay">
+      <img src="./img/preloader.gif" alt="Preloader icon" />
+    </div>
+
+    <main>
+      <div id="table-section">
+        <form action="/">
+          <img src="./img/search-icon.svg" alt="Search Icon" />
+          <input
+            type="text"
+            placeholder="Enter something"
+            name="search-box"
+            id="search-box"
+            value=""
+          />
+        </form>
+
+        <div id="table-wrapper">
+          <div id="table-headers">
+            <table>
+              <thead>
+                <tr class="maindatahead">
+                  <th class="column1">Id</th>
+                  <th class="column2">FirstName</th>
+                  <th class="column3">LastName</th>
+                  <th class="column4">Email</th>
+                  <th class="column5">Phone</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+
+          <!-- id="table-data" -->
+
+          <div>
+            <table>
+              <tbody id="mytabledata">
+                <tr class="data-row">
+                  <td class="column1">28</td>
+                  <td class="column2">Larisa</td>
+                  <td class="column3">Llaneza</td>
+                  <td class="column4">SCallison@non.org</td>
+                  <td class="column5">(763)248-9034</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Details box -->
+
+      <div id="info-wrapper">
+        <h1>Details</h1>
+        <p>Click on a table item to get detailed information</p>
+        <div id="info-content">
+          <div>
+            <b>User selected:</b
+            ><span id="userslected"> Marcellin Shrestha </span>
+          </div>
+          <div>
+            <b id="descriptin">Description: </b>
+            <textarea cols="50" rows="5" readonly id="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quia nihil. Est, illum minima libero rerum, nihil distinctio placeat sint nam quae repellendus obcaecati delectus totam non odio. Sint, reprehenderit?
+              </textarea
+            >
+          </div>
+          <div><b>Address:</b><span id="Address"> </span></div>
+          <div><b>City:</b><span id="city"> </span></div>
+          <div><b>State:</b> <span id="State"> </span></div>
+          <div><b>Zip:</b> <span id="zip"> </span></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
